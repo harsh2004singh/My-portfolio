@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Harsh Singh | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="left">Harsh's Portfolio</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="project.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<main>
+
+<section class="firstsection">
+
+<div class="leftsection">
+
+Hi, I'm <span class="purple">Harsh Singh</span>  
+a B.Tech Machine Learning Student.
+
+<div id="element"></div>
+
+<button class="btn" id="resumeBtn">
+Download Resume
+</button>
+
+</div>
+
+<div class="rightsection">
+<img src="https://png.pngtree.com/png-clipart/20211009/original/pngtree-trader-online-trading-in-flat-concept-png-image_6847817.png">
+</div>
+
+</section>
+
+<hr>
+
+<section class="second" id="education">
+
+<span class="text-gray">What I have understanding so far</span>
+<h1>Educational Background</h1>
+
+<div class="box">
+
+<div class="vertical">
+<img class="img-top" src="https://cdn3.iconfinder.com/data/icons/roles-computer-it/128/front-end_developer-2-512.png">
+<div class="vertical-text">
+NISM Investor Certificate Examination
+</div>
+<div class="vertical-desc">
+Understanding of stock market, trading and finance sector.
+</div>
+</div>
+
+<div class="vertical">
+<img class="img-top" src="https://cdn3.iconfinder.com/data/icons/roles-computer-it/128/front-end_developer-2-512.png">
+<div class="vertical-text">
+TCA Noida (Data Science)
+</div>
+<div class="vertical-desc">
+Python, MySQL, Machine Learning & Deep Learning.
+</div>
+</div>
+
+<div class="vertical">
+<img class="img-top" src="https://cdn3.iconfinder.com/data/icons/roles-computer-it/128/front-end_developer-2-512.png">
+<div class="vertical-text">
+Finology Business Analytics
+</div>
+<div class="vertical-desc">
+Industry analysis and investment decision making.
+</div>
+</div>
+
+<div class="vertical">
+<img class="img-top" src="https://cdn3.iconfinder.com/data/icons/roles-computer-it/128/front-end_developer-2-512.png">
+<div class="vertical-text">
+Gautam Buddha University
+</div>
+<div class="vertical-desc">
+B.Tech Machine Learning (2023-2027)
+</div>
+</div>
+
+<div class="vertical">
+<img class="img-top" src="https://cdn3.iconfinder.com/data/icons/roles-computer-it/128/front-end_developer-2-512.png">
+<div class="vertical-text">
+Finology BSE Certificate
+</div>
+<div class="vertical-desc">
+Learning investing principles and stock market analysis.
+</div>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>© 2025 Harsh Singh</p>
+
+<p>
+<a href="https://linkedin.com">LinkedIn</a> |
+<a href="https://github.com/harsh2004singh">GitHub</a> |
+<a href="mailto:harshsingh1676@gmail.com">Email</a>
+</p>
+
+</footer>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+
+/* Typing Animation */
+
+var typed = new Typed('#element',{
+strings:[
+"Machine Learning Enthusiast",
+"Aspiring Data Scientist",
+"data Analyst, find patterns in data",
+"Stock Market Learner",
+"Data Science Explorer"
+],
+typeSpeed:50,
+backSpeed:30,
+loop:true
+});
+
+
+/* Navbar Shadow */
+
+window.addEventListener("scroll",function(){
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>50){
+nav.style.background="#020617";
+nav.style.boxShadow="0 5px 20px rgba(0,0,0,0.5)";
+}else{
+nav.style.background="transparent";
+nav.style.boxShadow="none";
+}
+
+});
+
+
+/* Scroll Reveal */
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity=1;
+entry.target.style.transform="translateY(0)";
+}
+});
+
+});
+
+document.querySelectorAll(".vertical").forEach(el=>{
+observer.observe(el);
+});
+
+
+/* Resume Button Animation */
+
+const btn=document.getElementById("resumeBtn");
+
+btn.addEventListener("click",()=>{
+
+btn.innerText="Downloading...";
+
+setTimeout(()=>{
+btn.innerText="Download Resume";
+alert("Add your resume link here.");
+},2000);
+
+});
+
+
+/* Mouse Glow Effect */
+
+document.addEventListener("mousemove",function(e){
+
+const glow=document.createElement("div");
+
+glow.className="glow";
+
+glow.style.left=e.pageX+"px";
+glow.style.top=e.pageY+"px";
+
+document.body.appendChild(glow);
+
+setTimeout(()=>{
+glow.remove();
+},400);
+
+});
+
+</script>
+
+</body>
+</html>
